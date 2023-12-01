@@ -5,9 +5,13 @@ La aplicación ofrece una experiencia de usuario fluida y es capaz de funcionar 
 
 Funcionalidades
 Agregar Entrada: Puedes escribir tus pensamientos y guardarlos.
+
 Editar Entrada: Modifica las entradas ya guardadas para actualizar tus pensamientos.
+
 Eliminar Entrada: Elimina las entradas que ya deseas ver.
+
 Experiencia Offline: La aplicación puede ser utilizada incluso en condiciones de red limitadas.
+
 
 Tecnologías Utilizadas
 HTML
