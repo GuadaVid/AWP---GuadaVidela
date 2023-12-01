@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
-    // Cargar entradas almacenadas localmente al iniciar la aplicación
+    // Cargar entradas guardadas
     loadEntries();
 
-    // Registrar el Service Worker
+    // Registro del el Service Worker
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js')
             .then(registration => console.log('Service Worker registrado:', registration))
@@ -12,7 +12,7 @@ function init() {
     }
 }
 
-// Función para guardar una nueva entrada o actualizar una existente
+//guardar una nueva entrada 
 function saveEntry() {
     const entryText = document.getElementById('entry-text').value;
     if (entryText.trim() === '') return;
@@ -26,7 +26,7 @@ function saveEntry() {
     const entryIndex = parseInt(document.getElementById('entry-index').value);
 
     if (!isNaN(entryIndex) && entryIndex >= 0 && entryIndex < entries.length) {
-        // Si hay un índice válido, actualizar la entrada existente
+
         entries[entryIndex] = entry;
     } else {
         entries.push(entry);
@@ -38,13 +38,13 @@ function saveEntry() {
     // Actualizar la lista de entradas
     loadEntries();
 
-    // Limpiar el área de texto y el índice
+
     document.getElementById('entry-text').value = '';
     document.getElementById('entry-index').value = '';
 }
 
 
-// Función para cargar las entradas almacenadas localmente
+// cargar entradas que ya estaban 
 function loadEntries() {
     const entriesList = document.getElementById('entries-list');
     entriesList.innerHTML = '';
