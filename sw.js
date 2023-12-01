@@ -2,8 +2,10 @@ const CACHE_NAME = 'diario-cache-v1';
 const urlsToCache = [
     '/',
     '/index.html',
-    '/styles.css',
-    '/app.js'
+    '/Css/Styles.css',
+    '/Js/app.js',
+    '/Img'
+    
 ];
 
 self.addEventListener('install', event => {

@@ -1,13 +1,12 @@
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
-    // Cargar entradas guardadas
     loadEntries();
 
     // Registro del el Service Worker
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-            .then(registration => console.log('Service Worker registrado:', registration))
+        navigator.serviceWorker.register('sw.js')
+            .then(registration => console.log('Service Worker registrado', registration))
             .catch(error => console.error('Error al registrar el Service Worker:', error));
     }
 }
@@ -44,7 +43,7 @@ function saveEntry() {
 }
 
 
-// cargar entradas que ya estaban 
+// cargar entradas 
 function loadEntries() {
     const entriesList = document.getElementById('entries-list');
     entriesList.innerHTML = '';
